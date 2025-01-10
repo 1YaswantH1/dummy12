@@ -1,0 +1,162 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #74ebd5, #9face6); /* Background gradient */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container */
+#container {
+    width: 90%;
+    max-width: 800px;
+    background: linear-gradient(to right, #ffffff, #f8f8f8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header #logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #4a00e0;
+    text-transform: uppercase;
+    margin-left: 20%;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+}
+
+textarea, input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    background: linear-gradient(90deg, #ece9e6, #ffffff); /* Gradient background */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+input[type="range"]{
+    accent-color:#a174fb;
+
+}
+label{
+    color: #4a00e0;
+}
+
+#sliderValue {
+    font-weight: bold;
+    color: #4a00e0;
+}
+
+/* Form buttons */
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="reset"] {
+    background: linear-gradient(to right, #ff6f61, #f6d365);
+    color: #fff;
+}
+
+button[type="reset"]:hover {
+    background: linear-gradient(to right, #f6d365, #ff6f61);
+}
+
+button[type="submit"] {
+    background: linear-gradient(to right, #43e97b, #38f9d7);
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #38f9d7, #43e97b);
+}
+
+/* Result section */
+#result-section {
+    margin-top: 20px;
+}
+
+#result-section h3 {
+    color: #4a00e0;
+}
+
+textarea#result {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    font-weight: bold;
+    color: #333;
+    border: 1px solid #ddd;
+    width: 95%;
+    margin: 10px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+

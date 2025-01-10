@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummarizePro</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <link rel="manifest" href="/static/site.webmanifest">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image" sizes="180x180"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <img src="{{ url_for('static', filename='Text.png') }}" alt="SummarizePro Logo" id="logo">
+            <h1>SummarizePro</h1>
+        </header>
+        <main>
+            <form action="{{ url_for('Summarize') }}" method="post">
+                <div class="form-group">
+                    <label for="text">Enter your Text:</label>
+                    <textarea name="text" id="text" placeholder="Enter your Text" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="maxL">Select Max Length :</label>
+                    <input type="range" min="20" max="100" value="50" name="maxL" id="maxL" oninput="updateSliderValue(this.value)">
+                    <span id="sliderValue">50</span> words
+                </div>
+                <div class="form-buttons">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <section id="result-section">
+                <h3>Summarized Text</h3>
+                <textarea name="result" id="result" rows="10" cols="30" readonly>{{ result }}</textarea>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 SummarizePro. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        function updateSliderValue(value) {
+            document.getElementById('sliderValue').textContent = value;
+        }
+    </script>
+</body>
+</html>
